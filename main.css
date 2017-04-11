@@ -1,0 +1,57 @@
+body{
+    background-color: #CFD1CB !important;
+}
+
+.well{
+    background-color: #71A2B6 !important;
+}
+
+ #graph-container {
+
+      top: 260px;
+      bottom: 10px;
+      left: 70px;
+      right: 70px;
+      position: absolute;
+      /*background-color: white !important;*/
+}
+/*.container{
+    position: relative;
+}*/
+
+#buttons{
+    display: block;
+    text-align: center;
+}
+
+#graph{
+    display: none;
+}
+
+.well h1{
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Bungee Inline', cursive;
+}
+.well p{
+    font-size: 15px;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+#form {
+    width: 200px;
+    margin-left: 15px;
+}
+
+.results {
+    text-align: center;
+    font-family: 'PT Serif Caption', serif;
+    font-size: 16px;
+}
+
+input {
+    outline: 1px solid #de524b;
+
+}
+
+

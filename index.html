@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Bungee+Inline||PT+Serif+Caption" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/sigma.core.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/conrad.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/utils/sigma.utils.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/utils/sigma.polyfills.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/sigma.settings.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/classes/sigma.classes.dispatcher.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/classes/sigma.classes.configurable.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/classes/sigma.classes.graph.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/classes/sigma.classes.camera.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/classes/sigma.classes.quad.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/classes/sigma.classes.edgequad.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/captors/sigma.captors.mouse.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/captors/sigma.captors.touch.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/sigma.renderers.canvas.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/sigma.renderers.webgl.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/sigma.renderers.svg.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/sigma.renderers.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/webgl/sigma.webgl.nodes.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/webgl/sigma.webgl.nodes.fast.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/webgl/sigma.webgl.edges.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/webgl/sigma.webgl.edges.fast.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/webgl/sigma.webgl.edges.arrow.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/canvas/sigma.canvas.labels.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/canvas/sigma.canvas.hovers.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/canvas/sigma.canvas.nodes.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/canvas/sigma.canvas.edges.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/canvas/sigma.canvas.edges.curve.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/canvas/sigma.canvas.edges.arrow.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.curve.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.arrow.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/canvas/sigma.canvas.extremities.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/svg/sigma.svg.utils.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/svg/sigma.svg.nodes.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/svg/sigma.svg.edges.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/svg/sigma.svg.edges.curve.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/svg/sigma.svg.labels.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/renderers/svg/sigma.svg.hovers.def.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/middlewares/sigma.middlewares.rescale.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/middlewares/sigma.middlewares.copy.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/misc/sigma.misc.animation.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/misc/sigma.misc.bindEvents.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/misc/sigma.misc.bindDOMEvents.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/src/misc/sigma.misc.drawHovers.js"></script>
+  <!-- END SIGMA IMPORTS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/plugins/sigma.plugins.animate/sigma.plugins.animate.js"></script>
+  <script src="/Users/timakro/Desktop/projects/spotifyFinder/sigma.js/plugins/sigma.layout.noverlap/sigma.layout.noverlap.js"></script>
+  <script src="renderer.js"></script>
+  <script src="app.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="well ">
+      <h1>Music Mapper
+        <h1>
+          <p>Expand your musical horizons by discovering artists related to your favorite artists</p>
+    </div>
+
+
+    <div id="buttons">
+      <form class="form-horizontal">
+        <div class="control-group">
+          <div class="controls form-inline">
+
+            <input type="text" class="input-small" placeholder="Artist" id="inputValue">
+            <input type="text" class="input-small" placeholder="Artist" id="inputValue">
+            <input type="text" class="input-small" placeholder="Artist" id="inputValue">
+            <input type="text" class="input-small" placeholder="Artist" id="inputValue">
+            <input type="text" class="input-small" placeholder="Artist" id="inputValue">
+            <button type="button" class="btn">Create Map!</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="results">You should check out these artists!: </br></div>
+
+  </div>
+
+   <div id="graph">
+      <div id="graph-container"></div>
+    </div>
+
+
+
+</body>
+
+</html>
