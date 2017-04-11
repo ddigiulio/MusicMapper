@@ -10,6 +10,7 @@ $(window).on("load", function (e) {
     $('.btn').on("click", function (event) {
 
         event.preventDefault();
+        $(".creatingMap").show();
         $("#graph-container").empty();
         searchRequest = [];
         artistsArray = [];

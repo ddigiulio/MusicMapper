@@ -147,8 +147,10 @@ function renderGraph(graphToRender, urls) {
         });
         // Start the layout:
         s.startNoverlap();
-      };
+        $('.creatingMap').hide();
+        $('.results').show();
 
+      };
 
     });
   });

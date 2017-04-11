@@ -1,10 +1,14 @@
-body{
-    background-color: #CFD1CB !important;
+*{
+    padding: 0px;
+  
 }
 
-.well{
-    background-color: #71A2B6 !important;
+.container-fluid2{
+    padding: 0px;
+    background-image: url('http://cdn.wallpapersafari.com/55/23/tPClx0.jpg') ;
+    top: 0px;
 }
+
 
  #graph-container {
 
@@ -13,11 +17,9 @@ body{
       left: 70px;
       right: 70px;
       position: absolute;
-      /*background-color: white !important;*/
+      
 }
-/*.container{
-    position: relative;
-}*/
+
 
 #buttons{
     display: block;
@@ -28,30 +30,48 @@ body{
     display: none;
 }
 
-.well h1{
-    font-size: 50px;
+.container-fluid2 h1{
+    font-size: 60px;
     text-align: center;
-    font-family: 'Bungee Inline', cursive;
+    font-family: 'Monoton', cursive;
+    padding: 0px;
+    color: white;
 }
-.well p{
-    font-size: 15px;
-    font-family: 'Anonymous Pro', monospace;
+.container-fluid2 p{
+    font-size: 18px;
+    font-family: 'Audiowide', cursive;
+    color: white;
 }
 
 #form {
-    width: 200px;
-    margin-left: 15px;
+    /*width: 200px;*/
+    /*margin-left: 15px;*/
 }
 
 .results {
     text-align: center;
-    font-family: 'PT Serif Caption', serif;
+    font-family: 'Audiowide', cursive;
     font-size: 16px;
+    color: white;
+    margin-top: 0px;
+    display:none;
 }
 
-input {
-    outline: 1px solid #de524b;
+input{
+   padding: 10px;
+   margin-bottom: 20px;
 
 }
 
+.btn{
+    padding: 11px;
+    margin-bottom: 2px; 
+}
 
+.creatingMap {
+    margin: 200px;
+    text-align: center; 
+    font-family: 'Audiowide', cursive;
+    font-size: 40px;
+    display: none;
+}
