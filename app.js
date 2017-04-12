@@ -10,6 +10,8 @@ $(window).on("load", function (e) {
     $('.btn').on("click", function (event) {
 
         event.preventDefault();
+        $('.results').hide();
+        $('.results p').empty();
         $(".creatingMap").show();
         $("#graph-container").empty();
         searchRequest = [];

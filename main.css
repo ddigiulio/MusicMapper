@@ -1,12 +1,11 @@
-*{
+body{
     padding: 0px;
-  
 }
-
 .container-fluid2{
-    padding: 0px;
+    
+    margin-top: 0px;
     background-image: url('http://cdn.wallpapersafari.com/55/23/tPClx0.jpg') ;
-    top: 0px;
+ 
 }
 
 
@@ -19,7 +18,6 @@
       position: absolute;
       
 }
-
 
 #buttons{
     display: block;
@@ -36,16 +34,12 @@
     font-family: 'Monoton', cursive;
     padding: 0px;
     color: white;
+    margin-top: 0px;
 }
 .container-fluid2 p{
     font-size: 18px;
     font-family: 'Audiowide', cursive;
     color: white;
-}
-
-#form {
-    /*width: 200px;*/
-    /*margin-left: 15px;*/
 }
 
 .results {
@@ -60,12 +54,11 @@
 input{
    padding: 10px;
    margin-bottom: 20px;
-
 }
 
 .btn{
-    padding: 11px;
-    margin-bottom: 2px; 
+    padding: 11.5px;
+    margin-bottom: 2.5px; 
 }
 
 .creatingMap {
