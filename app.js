@@ -58,7 +58,12 @@ $(window).on("load", function (e) {
 
     function findRelatedArtistsAll(inputArray) {
         return artistsArray.map(function (element) {
-            return $.get("https://api.spotify.com/v1/artists/" + element.id + "/related-artists")
+            return $.ajax(
+                {
+                type: 'GET',
+                url:"https://api.spotify.com/v1/artists/" + element.id + "/related-artists",
+                headers: {Authorization: `Bearer BQC2BLnNN4r9fJijO05PQXRYWIbTMjz4bhYhACETWOkJBBrH44gxLIRQEt94bFU1XtjQJEFbJnDn6zV994`}
+            })
                 .then(function success(data) {
                     inputArray.push(data);
                 }, function fail(err) {});
@@ -69,7 +74,11 @@ $(window).on("load", function (e) {
         return request.map(function (element) {
             var URL = "https://api.spotify.com/v1/search?q=";
             var searchArtistName = URL + element + "&type=artist";
-            return $.get(searchArtistName)
+            return $.ajax({
+                type: 'GET',
+                url: searchArtistName,
+                headers: {Authorization: `Bearer BQC2BLnNN4r9fJijO05PQXRYWIbTMjz4bhYhACETWOkJBBrH44gxLIRQEt94bFU1XtjQJEFbJnDn6zV994`}
+            })
                 .then(function (data) {
                     createArtistsArray(data);
                 }, function fail(err) {
@@ -80,7 +89,6 @@ $(window).on("load", function (e) {
 
     function buildInterArtistsRelationshipsMap() {
         var artistsRelatedArtists = [];
-        //console.log(artistsArray);
         artistsArray.forEach(function (element, i) {
             graph.nodes.push({
                 id: 'a' + i,

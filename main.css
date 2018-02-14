@@ -1,34 +1,30 @@
-body{
+body {
     padding: 0px;
 }
-.container-fluid2{
-    
+
+.container-fluid2 {
     margin-top: 0px;
-    background-image: url('http://cdn.wallpapersafari.com/55/23/tPClx0.jpg') ;
- 
+    background-image: url('http://cdn.wallpapersafari.com/55/23/tPClx0.jpg');
 }
 
-
- #graph-container {
-
-      top: 280px;
-      bottom: 10px;
-      left: 70px;
-      right: 70px;
-      position: absolute;
-      
+#graph-container {
+    top: 280px;
+    bottom: 10px;
+    left: 70px;
+    right: 70px;
+    position: absolute;
 }
 
-#buttons{
+#buttons {
     display: block;
     text-align: center;
 }
 
-#graph{
+#graph {
     display: none;
 }
 
-.container-fluid2 h1{
+.container-fluid2 h1 {
     font-size: 60px;
     text-align: center;
     font-family: 'Monoton', cursive;
@@ -36,7 +32,8 @@ body{
     color: white;
     margin-top: 0px;
 }
-.container-fluid2 p{
+
+.container-fluid2 p {
     font-size: 18px;
     font-family: 'Audiowide', cursive;
     color: white;
@@ -48,22 +45,22 @@ body{
     font-size: 16px;
     color: white;
     margin-top: 0px;
-    display:none;
+    display: none;
 }
 
-input{
-   padding: 10px;
-   margin-bottom: 20px;
+input {
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
-.btn{
+.btn {
     padding: 11.5px;
-    margin-bottom: 2.5px; 
+    margin-bottom: 2.5px;
 }
 
 .creatingMap {
     margin: 200px;
-    text-align: center; 
+    text-align: center;
     font-family: 'Audiowide', cursive;
     font-size: 40px;
     display: none;
