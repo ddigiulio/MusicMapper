@@ -122,13 +122,11 @@ function renderGraph(graphToRender, urls) {
             edgeHoverSizeRatio: 3,
             enableEdgeHovering: true,
             edgeHoverExtremities: true,
-            //autoRescale: ['nodePosition', 'edgeSize'],
-
+            // autoRescale: ['nodePosition', 'edgeSize'],
 
           }
         });
 
-        
         var noverlapListener = s.configNoverlap({
           nodeMargin: 2.0,
           scaleNodes: 1.00,
@@ -149,13 +147,10 @@ function renderGraph(graphToRender, urls) {
         s.startNoverlap();
         $('.creatingMap').hide();
         $('.results').show();
-
+        // renderer.resize()
       };
 
     });
   });
-
-
-
 
 }

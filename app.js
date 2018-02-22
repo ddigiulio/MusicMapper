@@ -1,19 +1,20 @@
 var graph;
 var urls;
 var artistsSuggested;
+var accessToken;
 
 $(window).on("load", function (e) {
 
     var artistsArray;
-
     var searchRequest;
+    getAccessToken();
+
     $('.btn').on("click", function (event) {
 
         event.preventDefault();
         $('.results').hide();
         $('.results p').empty();
         $(".creatingMap").show();
-        $("#graph-container").empty();
         searchRequest = [];
         artistsArray = [];
         graph = {
@@ -34,6 +35,20 @@ $(window).on("load", function (e) {
         $("#graph").show();
 
     });
+
+    function getAccessToken() {
+        $.ajax(
+            {
+                type: 'GET',
+                url: "http://localhost:8080/musicmapper/accesstoken"        
+            
+            })
+            .then(data => {
+                console.log(data)
+                // accessToken = data.access_token;
+                // console.log(accessToken)
+            })
+    }
 
     function createArtistsArray(data) {
         var artistToAdd;
@@ -57,16 +72,19 @@ $(window).on("load", function (e) {
     };
 
     function findRelatedArtistsAll(inputArray) {
+
         return artistsArray.map(function (element) {
             return $.ajax(
                 {
-                type: 'GET',
-                url:"https://api.spotify.com/v1/artists/" + element.id + "/related-artists",
-                headers: {Authorization: `Bearer BQC2BLnNN4r9fJijO05PQXRYWIbTMjz4bhYhACETWOkJBBrH44gxLIRQEt94bFU1XtjQJEFbJnDn6zV994`}
-            })
+                    type: 'GET',
+                    url: "https://api.spotify.com/v1/artists/" + element.id + "/related-artists",
+                    headers: {
+                        Authorization: `Bearer ${accessToken}`
+                    }
+                })
                 .then(function success(data) {
                     inputArray.push(data);
-                }, function fail(err) {});
+                }, function fail(err) { });
         });
     };
 
@@ -77,7 +95,7 @@ $(window).on("load", function (e) {
             return $.ajax({
                 type: 'GET',
                 url: searchArtistName,
-                headers: {Authorization: `Bearer BQC2BLnNN4r9fJijO05PQXRYWIbTMjz4bhYhACETWOkJBBrH44gxLIRQEt94bFU1XtjQJEFbJnDn6zV994`}
+                headers: { Authorization: `Bearer ${accessToken}` }
             })
                 .then(function (data) {
                     createArtistsArray(data);
@@ -129,7 +147,6 @@ $(window).on("load", function (e) {
                         else {
                             var finder = artistsQuickCheck.indexOf(relatedArtist.id);
                             artistsContained[finder].locations.push(indexCurrent);
-
                         }
                     });
                     indexCurrent++;
@@ -142,45 +159,56 @@ $(window).on("load", function (e) {
                 artistsContained.forEach(function (element, i) {
 
                     if (artistsSuggested.length < 5) {
-                        artistsSuggested.push(element.artist.name);
+                        artistsSuggested.push(element);
                     }
-
-                    graph.nodes.push({
-                        id: 'b' + i,
-                        label: element.artist.name,
-                        type: 'image',
-                        url: urls[i + artistsArray.length],
-                        x: Math.random(),
-                        y: Math.random(),
-                        size: 40 / artistsArray.length,
-
-
-                    });
-                    element.locations.forEach(function (locus, j) {
-
-                        graph.edges.push({
-                            id: element.artist.name + j,
-                            source: 'b' + i,
-                            target: 'a' + locus,
-                            size: .5,
-                            color: '#250001',
-                            type: 'curvedArrow',
-
-                        });
-
-                    });
                 });
-                var results = "<p>";
+                var results = "<div>";
 
-                artistsSuggested.forEach(function (e, i) {
-                    if (i < artistsSuggested.length - 1) {
-                        results += e + ", "
+
+                var promises = [];
+                promises = artistsSuggested.map(function (e, i) {
+                    if (i < artistsSuggested.length) {
+                        
+                        console.log(e)
+                        return new Promise ((resolve, reject) => {
+                            $.ajax(
+                            {
+                                type: 'GET',
+                                url: "https://api.spotify.com/v1/artists/" + e.artist.id + "/top-tracks",
+                                headers: {
+                                    Authorization: `Bearer ${accessToken}`
+                                },
+                                data: {
+                                    "country": "US"
+                                }
+                            })
+                            .then(data => {
+                                console.log(data);
+                                results += (
+                                    '<div class="artistContainer">' + `<img src=${e.artist.images[2].url}>`
+                                    + '<div class="infoContainer">'
+                                    + `${e.artist.name}` + '<br/>' + `<a href=${e.artist.external_urls.spotify} target="_blank"> Artist Page </a>` + '<br/>' + 
+                                    `<iframe src="https://open.spotify.com/embed?uri=${data.tracks[0].uri}" width="300" height="80" frameborder="1" allowtransparency="true"></iframe>` +
+                                    '</div>' +
+                                    '</div>' + '<br/>')
+                                resolve(results);
+                            })
+                        });
                     }
-                    else results += e + "<p>";
 
-                });            
-                $('.results').append(results);
-                renderGraph(graph, urls);
+                })
+                Promise.all(promises)
+                .then(results => {
+                    console.log(results)
+                    $('.results').append(results[results.length-1]);
+                $('.results').show();
+                })
+                
+
+
+                $('.creatingMap').hide();
+
+
 
             });
     };

@@ -1,5 +1,7 @@
 body {
     padding: 0px;
+    height: 100%;
+    overflow: auto;
 }
 
 .container-fluid2 {
@@ -7,22 +9,12 @@ body {
     background-image: url('http://cdn.wallpapersafari.com/55/23/tPClx0.jpg');
 }
 
-#graph-container {
-    top: 280px;
-    bottom: 10px;
-    left: 70px;
-    right: 70px;
-    position: absolute;
-}
 
 #buttons {
     display: block;
     text-align: center;
 }
 
-#graph {
-    display: none;
-}
 
 .container-fluid2 h1 {
     font-size: 60px;
@@ -69,3 +61,68 @@ input {
 a {
     color: white;
 }
+
+
+/* @media (min-width: 360px) {
+
+    
+    #graph-container {
+        top: 360px;
+        bottom: 10px;
+        left: 70px;
+        right: 70px;
+        position: absolute;
+    }
+    
+    #graph{
+        margin: 50px auto;
+    }
+    
+    .container-fluid2 h1 {
+        font-size: 40px;
+        text-align: center;
+        font-family: 'Monoton', cursive;
+        padding: 0px;
+        color: white;
+        margin-top: 0px;
+    }
+    
+    .container-fluid2 p {
+        font-size: 15px;
+        font-family: 'Audiowide', cursive;
+        color: white;
+    }
+    
+    .results {
+        text-align: center;
+        font-family: 'Audiowide', cursive;
+        font-size: 16px;
+        color: white;
+        margin-top: 0px;
+        display: none;
+    }
+    
+    input {
+        padding: 10px;
+        margin-bottom: 20px;
+        height: 16px;
+    }
+    
+    .btn {
+        padding: 11.5px;
+        margin-bottom: 2.5px;
+    }
+    
+    .creatingMap {
+        margin: 15px auto;
+        text-align: center;
+        font-family: 'Audiowide', cursive;
+        font-size: 40px;
+        display: none;
+    }
+    
+    a {
+        color: white;
+    }
+    
+} */
