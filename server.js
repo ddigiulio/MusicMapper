@@ -2,7 +2,8 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-var cors = require('cors')
+var cors = require('cors');
+const axios = require('axios')
 
 mongoose.Promise = global.Promise;
 
@@ -16,22 +17,31 @@ app.use(bodyParser.json());
 
 
 app.get('/accesstoken', (req, res) =>{
-  var url= "https://accounts.spotify.com/api/token"
-  res.json("hi");
+  axios({
+    url: 'https://accounts.spotify.com/api/token',
+    method: 'post',
+    params: {
+      grant_type: 'client_credentials'
+    },
+    headers: {
+      'Accept':'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    auth: {
+      username: '422b90e2341e450f9ba89cbd3278e239',
+      password: 'd7fcced5098949d3b03aed392cd61205'
+    }
+  }).then(function(response) {
+      res.send(response.data.access_token);
+  }).catch(function(error) {
+  });
 
-  // url: "https://accounts.spotify.com/api/token",
-  // data: {
-  //     grant_type: 'client_credentials'
-  // },
-  // headers: {
-  //     Authorization: `Basic NDIyYjkwZTIzNDFlNDUwZjliYTg5Y2JkMzI3OGUyMzk6ZDdmY2NlZDUwOTg5NDlkM2IwM2FlZDM5MmNkNjEyMDU=`,
-
-  // }
+ 
 
 })
-// app.use('*', function(req, res) {
-//   return res.status(404).json({message: 'Not Found'});
-// });
+app.use('*', function(req, res) {
+  return res.status(404).json({message: 'Not Found'});
+});
 
 let server;
 

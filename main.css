@@ -1,4 +1,302 @@
-@media (min-width: 1080px) {body {
+@media (min-width: 360px) {
+    body {
+        padding: 0px;
+        height: 100%;
+        /* overflow: auto; */
+        background-image: url('http://cdn.wallpapersafari.com/55/23/tPClx0.jpg')
+    }
+    
+    .container {
+        margin: 0px auto;
+    }
+    
+    #buttons {
+        display: block;
+        text-align: center;
+    }
+    
+    .container h1 {
+        font-size: 40px;
+        text-align: center;
+        font-family: 'Monoton', cursive;
+        padding: 0px;
+        color: #36454f;
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px
+        
+    }
+    
+    .container p {
+        text-align: center;
+        padding-top: 15px;
+        font-size: 20px;
+        font-family: 'Audiowide', cursive;
+        color: #36454f;
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+    
+    .form-horizontal{
+        margin-top: 15px;
+    }
+    .results {
+        text-align: center;
+        font-family: 'Audiowide', cursive;
+        font-size: 16px;
+        color: white;
+        margin-top: 0px;
+        display: none;
+    }
+    
+    .input-small {
+        padding: 10px;
+        width: 300px;
+        margin: 5px;
+        height: 20px;
+        font-size: 20px;
+        text-align: center;
+        color: #36454f;
+        font-family: 'Audiowide', cursive;
+    }
+    
+    .btn {
+        padding: 10px;
+        font-size: 22px;
+        color: #36454f;
+        margin-top: 30px;
+        border-radius: 5px;
+        font-family: 'Audiowide', cursive;
+    }
+    .infoContainer{
+        width: auto;
+        margin-top: 15px;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #36454f;
+        height: 140px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: 	#282828;
+        border-radius: 5px;
+        
+    }
+    .artistContainer{
+        width: 350px;
+        height: 350px;
+        text-align: center;
+        margin: auto;
+    }
+    .artistImage{
+        width: 160px;
+        padding: 5px;
+        margin: auto;
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 5px;
+        border-color: #36454f;
+        /* float: left; */
+        height: 160px;
+        background-color: 	#ffefd5
+    }
+    .artistName{
+        font-size: 24px;
+        color: #36454f;
+        font-family: 'Audiowide', cursive;
+    }
+    .results p {
+        font-size: 24px;
+        color: #36454f;
+        font-family: 'Audiowide', cursive;
+    }
+    
+    .results a {
+        text-decoration: none;
+        font-size: 24px;
+        color: white;
+    }
+    
+    .song{
+        padding: 3px;
+        margin-top: 5px;
+        border-style: solid;
+        border-color:#36454f;
+        border-width: 1px;
+        margin-bottom: 4px;
+    }
+    
+    .newSearch{
+        font-size: 36px;
+        border-radius: 5px;
+        color: #36454f;
+        font-family: 'Audiowide', cursive;
+        background-color: 	#ffefd5;
+        margin: 15px;
+    }
+    
+    .newSearchContainer{
+        text-align: center;
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    body {
+        padding: 0px;
+        height: 100%;
+        overflow: auto;
+        background-image: url('http://cdn.wallpapersafari.com/55/23/tPClx0.jpg')
+    }
+    
+    .container {
+        margin: 260px auto;
+    }
+    
+    #buttons {
+        display: block;
+        text-align: center;
+    }
+    
+    .container h1 {
+        font-size: 80px;
+        text-align: center;
+        font-family: 'Monoton', cursive;
+        padding: 0px;
+        color: #36454f;
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px
+        
+    }
+    
+    .container p {
+        text-align: center;
+        padding-top: 15px;
+        font-size: 24px;
+        font-family: 'Audiowide', cursive;
+        color: #36454f;
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+    
+    .form-horizontal{
+        margin-top: 15px;
+    }
+    .results {
+        text-align: center;
+        font-family: 'Audiowide', cursive;
+        font-size: 16px;
+        color: white;
+        margin-top: 0px;
+        display: none;
+    }
+    
+    .input-small {
+        padding: 10px;
+        width: 300px;
+        margin: 5px;
+        height: 25px;
+        font-size: 20px;
+        text-align: center;
+        color: #36454f;
+        font-family: 'Audiowide', cursive;
+    }
+    
+    .btn {
+        padding: 10px;
+        font-size: 25px;
+        color: #36454f;
+        margin-top: 30px;
+        border-radius: 5px;
+        font-family: 'Audiowide', cursive;
+    }
+    
+    .infoContainer{
+        width: auto;
+        margin-top: 0px;
+        float: left;
+        height: 170px;
+        border-top: solid 4px #36454f;
+        border-bottom: solid 4px #36454f;
+        border-right: solid 4px #36454f;
+        border-radius: 5px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: 	#282828
+        
+    }
+    .artistContainer{
+        width: 520px;
+        height: 180px;
+        text-align: center;
+        margin: auto;
+    }
+    .artistImage{
+        width: 160px;
+        padding: 5px;
+        border-style: solid;
+        border-width: 4px;
+        border-radius: 5px;
+        border-color: #36454f;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        float: left;
+        height: 160px;
+        background-color: 	#ffefd5
+    }
+    .artistName{
+        font-size: 35px;
+        color: #36454f;
+        font-family: 'Audiowide', cursive;
+    }
+    .results p {
+        font-size: 24px;
+        color: #36454f;
+        font-family: 'Audiowide', cursive;
+    }
+    
+    .results a {
+        text-decoration: none;
+        font-size: 28px;
+        color: white;
+    }
+    
+    .song{
+        margin: 10px auto;
+        border-style: solid;
+        border-color:#36454f;
+        border-width: 1px;
+    }
+    
+    .newSearch{
+        font-size: 36px;
+        border-radius: 5px;
+        color: #36454f;
+        font-family: 'Audiowide', cursive;
+        background-color: 	#ffefd5;
+        margin: 15px;
+    }
+    
+    .newSearchContainer{
+        text-align: center;
+        display: none;
+    }
+    
+    }
+
+
+@media (min-width: 1080px) {
+    
+body {
     padding: 0px;
     height: 100%;
     overflow: auto;
@@ -73,28 +371,41 @@
 
 .infoContainer{
     width: auto;
-    /* text-align: center; */
+    margin-top: 0px;
     float: left;
     height: 170px;
+    border-top: solid 4px #36454f;
+    border-bottom: solid 4px #36454f;
+    border-right: solid 4px #36454f;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: 	#282828
     
 }
 .artistContainer{
-    width: 700px;
+    width: 520px;
     height: 180px;
     text-align: center;
-    margin: 0 auto;
+    margin: auto;
 }
 .artistImage{
-    width: auto;
+    width: 160px;
     padding: 5px;
     border-style: solid;
-    border-width: 5px;
-    border-radius 5px;
+    border-width: 4px;
+    border-radius: 5px;
     border-color: #36454f;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     float: left;
+    height: 160px;
+    background-color: 	#ffefd5
 }
 .artistName{
-    font-size: 28px;
+    font-size: 35px;
     color: #36454f;
     font-family: 'Audiowide', cursive;
 }
@@ -107,6 +418,28 @@
 .results a {
     text-decoration: none;
     font-size: 28px;
+    color: white;
+}
+
+.song{
+    margin: 10px auto;
+    border-style: solid;
+    border-color:#36454f;
+    border-width: 1px;
+}
+
+.newSearch{
+    font-size: 36px;
+    border-radius: 5px;
+    color: #36454f;
+    font-family: 'Audiowide', cursive;
+    background-color: 	#ffefd5;
+    margin: 15px;
+}
+
+.newSearchContainer{
+    text-align: center;
+    display: none;
 }
 
 }
