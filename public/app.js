@@ -52,7 +52,7 @@ $(window).on("load", function (e) {
         $.ajax(
             {
                 type: 'GET',
-                url: "http://localhost:8080/accesstoken"
+                url: "https://music-mapper.herokuapp.com/accesstoken"
 
             })
             .then(data => {
