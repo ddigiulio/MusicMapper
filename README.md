@@ -8,10 +8,10 @@ This application allows you to search for new and interesting artists based on a
 
 ## API and Endpoints used:
 -	[Spotify Web API](https://developer.spotify.com/web-api/)
--	[Sigma JS](http://sigmajs.org/)
 
 
-In this application, I used the Spotify Web API to research the artists and find their related artists to suggest new music.  I used SigmaJS to create a map of the input artists and related artists in order to accurately visualize relationships between artists. 
+
+In this application, I used the Spotify Web API to research the artists and find their related artists to suggest new music.   
 
 ### User input data:
 Find related artists based on search input from the user:
@@ -21,8 +21,6 @@ Find related artists based on search input from the user:
 - A list of interesting related artists to listen to:
 ![](https://github.com/ddigiulio/MusicMapper/blob/master/images/Screen%20Shot%202017-04-10%20at%204.16.04%20PM.png?raw=true)
 ￼
-- A graph of the search artists and their related artists:
-![](https://github.com/ddigiulio/MusicMapper/blob/master/images/Screen%20Shot%202017-04-10%20at%204.17.37%20PM.png?raw=true)
 ￼
 
 
