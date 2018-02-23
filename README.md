@@ -15,11 +15,11 @@ In this application, I used the Spotify Web API to research the artists and find
 
 ### User input data:
 Find related artists based on search input from the user:
-![](https://raw.githubusercontent.com/ddigiulio/MusicMapper/master/images/Screen%20Shot%202017-04-10%20at%204.13.54%20PM.png)
+![alt text](images/homepage.png "Home Page")
 
 ### Application output:
 - A list of interesting related artists to listen to:
-![](https://github.com/ddigiulio/MusicMapper/blob/master/images/Screen%20Shot%202017-04-10%20at%204.16.04%20PM.png?raw=true)
+![alt text](images/results.png "Results Page")
 ￼
 ￼
 
