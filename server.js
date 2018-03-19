@@ -17,6 +17,8 @@ app.use(bodyParser.json());
 
 
 app.get('/accesstoken', (req, res) =>{
+
+  console.log("here")
   axios({
     url: 'https://accounts.spotify.com/api/token',
     method: 'post',

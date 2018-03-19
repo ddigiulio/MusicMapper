@@ -5,6 +5,15 @@
         /* overflow: auto; */
         background-image: url('http://cdn.wallpapersafari.com/55/23/tPClx0.jpg')
     }
+
+    .error{
+        text-align: center;
+        font-family: 'Audiowide', cursive;
+        font-size: 24px;
+        margin-top: 15px;
+        color: #36454f;
+    }
+    
     
     .container {
         margin: 0px auto;
@@ -174,6 +183,14 @@
         
     }
     
+    .error{
+        text-align: center;
+        font-family: 'Audiowide', cursive;
+        font-size: 24px;
+        margin-top: 15px;
+        color: #36454f;
+    }
+    
     .container p {
         text-align: center;
         padding-top: 15px;
@@ -301,6 +318,14 @@ body {
     height: 100%;
     overflow: auto;
     background-image: url('http://cdn.wallpapersafari.com/55/23/tPClx0.jpg')
+}
+
+.error{
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    font-size: 24px;
+    margin-top: 15px;
+    color: #36454f;
 }
 
 .container {

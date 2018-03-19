@@ -10,7 +10,7 @@ $(window).on("load", function (e) {
     getAccessToken();
 
     $('.btn').on("click", function (event) {
-
+        $('.error').empty();
         event.preventDefault();
  
         searchRequest = [];
@@ -27,17 +27,18 @@ $(window).on("load", function (e) {
                 searchRequest.push($(this).val());
             }
         });
-        if (searchRequest.length = 0){
-            console.log("Empty request")
+        if(searchRequest.length === 0 ){
+            var error = "<span> You haven't entered any artists! </span>"
+            $('.error').append(error);
         }
-        else {
+        
+        else{
             var promiseArray = makePromiseArray(searchRequest);
             Promise.all(promiseArray)
-                .then(buildInterArtistsRelationshipsMap);
+            .then(buildInterArtistsRelationshipsMap);
         }
-       
-       
-
+        
+    
     });
 
     $('.newSearch').on("click", function(event){
@@ -60,7 +61,7 @@ $(window).on("load", function (e) {
 
             })
             .then(data => {
-
+                console.log(data)
                 accessToken = data
 
             })
