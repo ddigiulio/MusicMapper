@@ -12,9 +12,7 @@ $(window).on("load", function (e) {
     $('.btn').on("click", function (event) {
 
         event.preventDefault();
-        // $('.results').hide();
-        // $('.results p').empty();
-        // $(".creatingMap").show();
+ 
         searchRequest = [];
         artistsArray = [];
         graph = {
@@ -23,26 +21,32 @@ $(window).on("load", function (e) {
         };
         urls = [];
         artistsSuggested = [];
+       
         $("input").each(function () {
             if ($(this).val().length != 0) {
                 searchRequest.push($(this).val());
             }
         });
-
-        var promiseArray = makePromiseArray(searchRequest);
-        Promise.all(promiseArray)
-            .then(buildInterArtistsRelationshipsMap);
+        if (searchRequest.length = 0){
+            console.log("Empty request")
+        }
+        else {
+            var promiseArray = makePromiseArray(searchRequest);
+            Promise.all(promiseArray)
+                .then(buildInterArtistsRelationshipsMap);
+        }
+       
        
 
     });
 
     $('.newSearch').on("click", function(event){
         event.preventDefault();
+       
         $('.results').empty();
         $('.results').hide();
         $("input").each(function () {
-            $(this).val('')  
-                
+            $(this).val('')          
         });
         $('.newSearchContainer').hide();
         $('.container').show();
